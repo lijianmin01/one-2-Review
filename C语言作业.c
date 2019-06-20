@@ -91,6 +91,7 @@ main(void)
 	char temp[100];
 	gets(temp);
 	look_case(temp);
+	int cnt = 0;//记录参加团队的对数
 	if (q_case == 3)
 	{
 		return 0;
@@ -109,8 +110,10 @@ main(void)
 			small_team[0].acm[q_question].flag = 1;
 			small_team[0].Solved++;
 		}
+		cnt=1;
+
 	}
-	int cnt = 1;//记录参加团队的对数
+	//其上述代码跟下述代码重叠了，这样写只是方便理解（第一个数据是否有效都可以顺利完成）
 	gets(temp);
 	while (strcmp(temp, "GAME OVER!") != 0)
 	{
