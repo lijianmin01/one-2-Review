@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>2019.5.19morning</title>
+        <style type="text/css">
+            body{
+                position: center;
+                background-image:url("5~图片/背景.jpg");
+                background-image-repeat:repeat-y;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="class">
+            <h1>css基本样式修饰</h1>
+            <h2>字体常用样式</h2>
+            <ul>字体常用样式
+                <li>字体系列：font-family</li>
+                    <ul>设置字体
+                        <li>font-family:'宋体';</li>
+                        <li>font-family:'宋体'，'仿宋'，'Times New Roman';</li>
+                        <li>若用户系统里有宋体，用宋体，无宋体则用仿宋</li>
+                    </ul>
+                <li>字体大小：font-size</li>
+                    <ul>字体大小
+                        <li>设置字体大小为绝对值 font-size：20px;</li>
+                        <li>设置字体大小为相对值 font-size: 2em;(或font-size:200%)</li>
+                        <li>相对父元素来设置大小</li>
+                        <h4>若未规定字体大小，普通文本的默认大小是16像素</h4>
+                    </ul>
+                <li>字体风格：font-style</li>
+                    <ul>设置字体倾斜显示
+                        <li>font-style:italic</li>
+                        <li>normal <br>
+                            italic(italic：浏览器会显示一个斜体的字体样式。)<br>
+                            oblique(oblique：浏览器会显示一个倾斜的字体样式。)</li>
+                    </ul>
+                <li>字体加粗：font-weight</li>
+                    <ul>设置字体加粗（固定值）
+                        <li>font-weight:900;</li>
+                        <li>属性值取值范围为:100~900</li>
+                    </ul>
+                    <ul>使用关键字加粗字体
+                        <li>font-weight:bolder</li>
+                        <li>属性：lighter  normal bold bolder</li>
+                        <li>400等同于normal,而700等同于bold</li>
+                    </ul>
+                <li>字体的综合设置</li>
+                    <ul>font
+                        <li>
+                            <ul>在一个声明中设置所有属性
+                                <li>font:italic bold 36px '宋体'</li>
+                                <li>font:36px '宋体'</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>设置顺序
+                                <li>不强制顺序，但是font-family不能是第一个</li>
+                                <li>未设置的属性值会使用默认值</li>
+                                <li>至少要设置两个属性</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <li>使用字体（尽量使用通用字体）
+                    <ul>使用字体 <br>
+                        windows中
+                        <li>中文字体：微软雅黑、黑体、宋体、华文楷体</li>
+                        <li>英文字体：Arial Segone ui</li>
+                        安卓和苹果设备中
+                        <li>中英文：sans-serif</li>
+                        <li>英文字体：Open Sans Helvetica系列</li>
+                        <br>
+                        <li>安全字体：Arial,Helvetica,Sans-serif</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>文本常用样式</h2>
+            <table border="3px" cellpadding="6px" cellspacing="6px">
+                <tr>
+                    <td>水平缩进</td>
+                    <td>text-indent</td>
+                    <td>text-indent
+                        <ul>设置段落元素的第一行缩进方式
+                            <li>text-indent:2em;</li>
+                            <li>text-indent:-3em;</li>
+                            <li>属性值可为绝对值（px）,也可为相对值（em）</li>
+                            <br>实战技巧
+                            <li>常用于设置段落的首航缩进</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>水平对齐</td>
+                    <td>text-align</td>
+                    <td>text-align:文本对齐
+                        <ul>设置元素的文本行对齐方式
+                            <li>text-align:left</li>
+                            <li>属性值：left center right </li>
+                            <li>默认对齐方式是左对齐</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>行高</td>
+                    <td>line-height</td>
+                    <td>line-height:行高
+                        <ul>设置行与行之间的距离
+                            <li>固定值（line-height:36px;）</li>
+                            <li>相对值（line-height:1.5em）</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>文本颜色</td>
+                    <td>color</td>
+                    <td>
+                        <ul>设置文本颜色
+                            <li>color:green</li>
+                            <li>color:#008000</li>
+                            <li>color:rgb(0,128.0)</li>
+                        </ul>
+                        <ul>rgb() <br>
+                            RGB,将红（red）,绿（green）,蓝（blue）三原色 <br>
+                            的色光以不同的比例相加，以产生多种多样的色光 <br>
+                            rgb(0,0,0)白色       rgb(255,255,255)黑色 <br>
+                </tr>
+                <tr>
+                    <td>文本修饰</td>
+                    <td>text-decoration</td>
+                    <td>text-decoration(设置文本修饰效果)
+                        <ul>
+                            <li>none:无装饰</li>
+                            <li>overline：上划线</li>
+                            <li>underline:下划线</li>
+                            <li>line-through：删除线</li>
+                            <br>
+                            <li>a元素默认有下划线，其他元素默认值为none</li>
+                            <li>可以来去掉浏览器给《a》元素加的默认线</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>字符转换</td>
+                    <td>text-transform</td>
+                    <td>text-transform(设置文本的大小写）~属性值
+                        <li>none</li>
+                        <li>uppercase:所有的字母转换成大写</li>
+                        <li>lowercase：把所有字母转换成小写</li>
+                        <li>capitalize：只对每个单词的首字母大写</li>
+                        <br>
+                        <li>小细节——行和段落 <br>
+                            行高跟文字要搭配，一般行高是文字的1.5~1.8倍最为合适
+                        </li>
+                    </td>
+                </tr>
+            </table>
+            <h2>为超链接的四种状态设置样式~设置超链接的多种状态时（》=2）时，需要 <br>
+            按照特定顺序设置</h2>
+            <ul>
+                <li>:link       ~未被访问的超链接</li>
+                <li>:visited    ~访问过的超链接</li>
+                <li>:hover      ~鼠标经过超链接</li>
+                <li>:active     ~链接呗点击的那一刻超链接</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>:focus  ~向拥有键盘输入的焦点元素添加样式</th>
+                </tr>
+                <tr>
+                    <th>：first-child    ~向元素的第一个子元素添加样式</th>
+                </tr>
+                <tr>
+                    <th>:lang           ~向带有指定lang属性的元素添加样式</th>
+                </tr>
+                <tr>
+                    <h4>link和visited只能用于超链接</h4>
+                </tr>
+            </table>
+            <h2>CSS背景类样式修饰</h2>
+            <p>CSS允许应用纯色作为背景，也允许使用背景图创建相当复杂效果</p>
+            <ul>
+                <li>背景色 <br>
+                    background-color:1、关键字（gray）<br>
+                    2、十六进制表示方式（#808080）<br>
+                    3、rgb表示方式，如：rgb(128,128,128)
+                </li>
+                <li>背景图像 <br>
+                    background-image:; <br>
+                    background-image:url(image/bg.jpg)
+                </li>
+                <li>背景图像重复 <br>
+                    background-repeat:repeat-x; <br>
+                    <table border="2" cellspacing="2">
+                        <tr>
+                            <th>值</th>
+                            <th>描述</th>
+                        </tr>
+                        <tr>
+                            <td>repeat</td>
+                            <td>默认。背景图将在垂直和水平方向重复</td>
+                        </tr>
+                        <tr>
+                            <td>repeat-x</td>
+                            <td>背景图像将在水平方向重复</td>
+                        </tr>
+                        <tr>
+                            <td>repeat-y</td>
+                            <td>背景图像将在垂直方向重复</td>
+                        </tr>
+                        <tr>
+                            <td>no-repeat</td>
+                            <td>背景图像仅显示一次</td>
+                        </tr>
+                        <tr>
+                            <td>inherit</td>
+                            <td>规定应该从父元素继承background-repeat属性设置</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>背景图像定位 <br>
+                    <img src="5~图片/图像的定位.png" alt="图像的定位">
+                </li>
+                <h2>CSS列表样式修饰</h2>
+                <ul>
+                    <li>列表标志类型 <br>
+                        list-style-type:square; <br>
+                        none(无标记)，disc(默认。标记是实心圆), <br>
+                        circle(标记是空心圆),square(标记是实心方块), <br>
+                        decimal(标记是数字),decimal-leading-zero(0开头的数字标记（01,02,03等）) <br>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </ul>
+
+        </div>
+    <div class="class">
+        <h1>第七章 网页布局</h1>
+        <ul> <li>网页布局</li>
+            <li>网页布局是指网页内容在页面上所处位置的设计</li>
+            <li>网页布局的宗旨~由整体到局部</li>
+        </ul>
+        <h3>布局历史</h3>
+        <p>HTML的局限性————块级、行级、行块级 <br>
+        聪明的方式————table布局 <br>
+            缺点：工作量大、维护困难  优点：兼容性好 <br>
+        DIV+CSS <br>
+            div-布局标签 <br>
+            css-布局方法 <br>
+        </p>
+        <h3>布局比较 <br>
+            <img src="5~图片/布局比较.png" alt="布局比较">
+        </h3>
+        <h3>布局方法 <br>
+            浮动——float
+            <ul>浮动：定义元素在哪个方向浮动，改变页面中对象的前后顺序
+                <li>float:none|left|right</li>
+                <li>如果包含框无法容纳水平排列的三个浮动元素，那么其他
+                浮动元素向下移动，直到有了足够的空间 <br>
+                    如果浮动元素的高度不同，浮动块会尽可能向上移动 <br>
+                </li>
+                <li>浮动的影响 <br>
+                    并排显示 <br>
+                    父元素高度塌陷 <br>
+                </li>
+                <li>清除浮动——父元素设置固定高度 <br>
+                    <h4>clear:left/right/both/none</h4>
+                    <ul>
+                        <li>left:不允许左边有浮动元素</li>
+                        <li>right：不允许右边有浮动元素</li>
+                        <li>both:不允许左右两边有浮动元素</li>
+                        <li>none：默认值，可以浮动</li>
+                    </ul>
+                    <h4>清除方法~伪元素~:after :before,并搭配属性 clear:both;
+                        <img src="5~图片/清除方法.png" alt="清除方法">
+                    </h4>
+                </li>
+                <li>溢出处理——overflow <br>
+                    定义溢出元素内容区如何处理 <br>
+                    <table cellspacing="1" cellpadding="2">
+                        <tr>
+                            <th>值</th>
+                            <th>描述</th>
+                        </tr>
+                        <tr>
+                            <td>visble</td>
+                            <td>默认值。内容不会被修剪，会呈现在元素框之外</td>
+                        </tr>
+                        <tr>
+                            <td>hidden</td>
+                            <td>内容会被修剪，并且其余内容是不可见的</td>
+                        </tr>
+                        <tr>
+                            <td>**scroll</td>
+                            <td>内容会被修剪，但是浏览器会显示滚动条以便查看其余内容</td>
+                        </tr>
+                        <tr>
+                            <td>auto</td>
+                            <td>如果内容被修剪，则浏览器会显示滚动条以便查看其余内容</td>
+                        </tr>
+                        <tr>
+                            <td>inherit</td>
+                            <td>规定应该从父元素继承overflow属性的值</td>
+                        </tr>
+                    </table>
+                    <p>清除浮动——overflow:hidden; <br>
+                        ~~父元素不设高度并且子元素浮动时，便父元素高度自动适应子元素高度 <br>
+                        ~~父元素设置的高度或宽度小于子元素时，是父元素出现相应滚动条或隐藏子元素
+                        超出部分内容
+                    </p>
+                    <h5><ul>浮动（float）注意事项
+                        <li>浮动元素距离父元素边框的位置，是该侧的父元素padding+ <br>
+                        自身margin的值</li>
+                        <li>通常不会超过父元素的边界</li>
+                        <li>元素一旦浮动起来就不属于父元素</li>
+                        <li>浮动元素不会相互重叠</li>
+                        <li>不能上下浮动，通常只设一种浮动即可</li>
+                        <li>如果父元素宽度不够，浮动元素会令起一行显示</li>
+                    </ul></h5>
+                </li>
+            </ul>
+            定位——position <br>
+        </h3>
+        <h2>position定位</h2>
+        <table cellpadding="1" cellspace="2" border="2">
+            <tr>
+                <th>属性</th>
+                <th>常用值</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td rowspan="4">position</td>
+                <td>static</td>
+                <td>默认值。没有定位，元素出现在正常的流中</td>
+            </tr>
+            <tr>
+
+                <td>relative</td>
+                <td>相对定位，相对其正常位置进行定位</td>
+                <td><ul>相对定位——position：relative;
+                    <li>与left，right，top，bottom等属性共同使用</li>
+                    <li>以自身本应该在的位置为参考物</li>
+                    <li>保留自身位置</li>
+                </ul></td>
+            </tr>
+            <tr>
+
+                <td>absolute</td>
+                <td>绝对定位，相对static定位以外的第一个元素有定位
+                属性的父元素进行定位</td>
+                <td><ul>绝对定位——position：absolute;
+                    <li>与left，right，top，bottom等属性共同使用</li>
+                    <li>若祖先元素已定位，则以该祖先元素为参照物</li>
+                    <li>若祖先元素为定位，则以body元素为参照物</li>
+                    <li>不保留自身位置</li>
+                </ul></td>
+            </tr>
+            <tr>
+
+                <td>fixed</td>
+                <td>固定定位，相对于浏览器窗口进行定位</td>
+                <td><ul>固定定位——position：fixed;
+                    <li>与left，right，top，bottom等属性共同使用</li>
+                    <li>以浏览器窗口进行定位</li>
+                </ul></td>
+            </tr>
+        </table>
+        <h3>float和position不同点 <br>
+        1、position 与top left等配套使用 <br>
+        2、float位置移动通过margin \ padding 等实现 <br>
+        3、布局通常使用float，而不是position</h3>
+        <ul>堆叠顺序————z-index
+            <li>用于体现元素在Z轴空间的堆叠关系</li>
+            <li>仅能在定位元素上奏效</li>
+            <li>大部分元素以数字为取值</li>
+            <li>可为多个元素设置</li>
+        </ul>
+        <h3>
+            <ul>
+                <li>需求获取</li>
+                <li>制作UI效果图</li>
+                <li>网页设计与实现</li>
+                    <ul>
+                        <li>分析网页结构</li>
+                        <li>用HTML实现网页结构</li>
+                        <li>用CSS实现网页结构布局</li>
+                        <li>填充网页内容</li>
+                        <li>修饰网页样式</li>
+                    </ul>
+                <li>调整浏览器兼容性</li>
+                <li>网站上线运营</li>
+            </ul>
+        </h3>
+
+
+    </div>
+    </body>
+</html>
