@@ -1,0 +1,93 @@
+/*
+ * 函数
+ *      -函数的定义
+ *          -形参列表
+ *              -传值
+ *              -传地址        //修改变量值传地址
+ *                  -数组作为参数
+ *                      -传数组首元素地址（数组名）
+ *                      -传数组长度
+ *                  -字符串数组作为参数
+ *                      -传数组首元素地址（访问到“\0”为止）
+ *             -返回值
+ *                  -如果返回值类型为void
+ *                      -return 语句 后面不能接任何数值
+ *                  -如果返回值类型不为 void
+ *                      -一定要return相应类型数值
+ *                  -不能return函数中变量的地
+ *
+ *      -函数的前置声明
+ *          -当函数的定义语句在函数调用语句之后的时候，需要进行函数的前置声明
+ *          -函数的前置声明关心的只有三项//可以省略形参名
+ *                  -返回值类型
+ *                  -函数名
+ *                  -形参列表中参数的个数及参数的类型和顺序，不关心形参名
+ *
+ *     -递归函数
+ *          -直接或间接调用自己，叫做递归
+ *          -先确定递归公式
+ *          -先确定递归公式，在确定递归结束条件
+ *          -写代码时，先写递归结束条件（结束的条件，一定要在递归之前），在写递归公式
+ *     -函数的指针
+ *          int fun(int a,int b);
+ *          int (* p)(int a,int b);
+ *          p(1,2);<==>fun(1,2);
+ *
+ *     -字符串的基本操作(自己写代码实现)
+ *          -strlen();
+ *          -strcpy();
+ *          -strcat();
+ *          -strcmp();
+ *
+ *-结果体
+ *      -结构体的定义
+ *          -什么才是结构体类型的类型名
+ *          -通过typedef来简化类型名
+ *              typedef struct student{
+ *                  char name[20];
+ *                  int age;
+ *                  struct student *tongzhuo;//大写的Student不允许使用
+ *              }Student，*P-Student;
+ *              <==>
+ *              1、typedef struct student Student;
+ *              2、typedef struct student *PStudent;
+ *-联合、枚举
+ *      -联合，所有成员公用一块内存，只有最后赋值的才起作用
+ *      union text{
+ *          int a;
+ *          doible b;
+ *      };
+ *      union test t;
+ *      t.a=10;
+ *      t.b=3.14;
+ *      -枚举的本质就是整形，但是枚举不允许将整形体赋值给枚举，可以将枚举赋值给整形
+ *      enum sex{boy,girl};
+ *      enum sex zhangsan;
+ *      zhangsan =boy;//zhangsan = 0;//不可以
+ *      int num=zhangsan;
+ *      int num=boy;
+ *-链表
+ *      -链表节点的定义
+ *          -data
+ *          -next
+ *              struct node{
+ *                  char name[20];
+ *                  int age;
+ *                  struct node *next;
+ *              }
+ *
+ *              struct student{
+ *                  char name[20];
+ *                  int age;
+ *              }
+ *              struct node{
+ *                  struct student data;
+ *                  struct node *p;
+ *              }
+ *      -链表插入（尾插、头部）
+ *      -链表的释放
+ *      -链表求长度
+ *      -链表的遍历打印
+ *      -链表元素的查找
+ *      -链表元素的删除
+ * */
