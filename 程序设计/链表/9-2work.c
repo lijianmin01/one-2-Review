@@ -7,41 +7,84 @@ typedef struct student
 	char   name[15];
 	int    score;
 	struct student *next;
-}STU;
+}Node;
 
-STU * create(int n)//创建链表
+//create、sort、visit和main函数如下：
+
+Node * create(int n)//创建链表
 {
-	STU *p=(STU *)malloc(sizeof(STU));
-	STU *p1=p;
-	p1.next=NULL;
+	Node *head=NULL;
+	//head=NULL;
 	int i;
 	for(i=0;i<n;i++)
 	{
-		STU temp;
-		scanf("%s %d",temp.name,&temp.score);
-		temp.next=NULL;
-		p1.next=temp;
+		Node *temp=(Node *)malloc(sizeof(Node));
+		scanf("%s",temp->name);
+		scanf("%d",&temp->score);
+		temp->next=NULL;
+		if(head)
+		{
+			Node *plist=head;
+			while(plist->next)
+			{
+				plist=plist->next;
+			}
+			plist->next=temp;
+		}else
+		{
+			head=temp;
+		}
+	}
+	return head;
+}
+void sort(Node *head)//排序
+{ 
+	int i,j;
+	Node *temp=head;
+	int len=0;//记录长度
+	if(head==NULL||head->next==NULL||head->next->next==NULL)
+	{
+		return ;
+	}	
+	while(temp->next)
+	{
+		temp=temp->next;
+		len++;
+	}
+	printf("%d\n",len);
+	for(i=0;i<len-1;i++)
+	{
+		for(;head->next;head=head->next)
+		{
+			if(head->score > head->next->score)
+			{
+				char name_t[15];
+				int score_t=head->score;
+				head->score=head->next->score;
+				head->next->score=score_t;
+				strcpy(name_t,head->name);
+				strcpy(head->name,head->next->name);
+				strcpy(head->next->name,name_t);
+			}
+		}
 	}
 }
-// void sort(STU *head)//排序
-// { 
-	
-// }
-void visit(STU *h)//遍历
+void visit(Node *h)//遍历
 {
-	for(;h.next!=NULL;h=h.next)
+	for(;h;h=h->next)
 	{
-		printf("%s %d",h->name,h->score);
+		printf("name:%s,score:%d\n",h->name,h->score);
 	}
 }
 int main(void)
 {
-	STU *head;
+	Node *head;
 	int num;
 	scanf("%d",&num);
 	head=create(num);
 	visit(head);
-	// sort(head);
-	// visit(head);
+	printf("\n");
+	sort(head);
+	visit(head);
 	return 0;
 }
