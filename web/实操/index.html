@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>实操</title>
+        <link rel="stylesheet" href="实操.css">
+    </head>
+    <body>
+        <div>
+            <ul>表格的相关属性：
+                <li>border:表格边框的宽度</li>
+                <li>bordercolor:表格边框的颜色</li>
+                <li>background:表格背景图</li>
+                <li>bgcolor:   表格背景颜色</li>
+                <li>cellpadding:单元边沿与其内容之间的距离（内部）</li>
+                <li>cellspacing:单元格之间的空白（外部）</li>
+                <li>width:规定表格元素的宽度</li>
+                <li>height:规定表格元素的高度</li>
+                <li>align：表格的对齐方式（left center right ）</li>
+                <li>colspan:跨列</li>
+                <li>rowspan:跨行</li>
+            </ul>
+            <table border="1" cellspacing="6" cellpadding="2">
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>成绩</th>
+                </tr>
+                <tr>
+                    <td>李健</td>
+                    <td>19</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>李欣</td>
+                    <td>19</td>
+                    <td>96</td>
+                </tr>
+            </table>
+            <br>
+            <h1 align="center">物资登记表</h1>
+            <table border="1" cellspacing="0" width="1000">
+                <tr>
+                    <th colspan="2">物资类别</th>
+                    <th colspan="2"></th>
+                    <th colspan="2">名称</th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <td colspan="8" align="center">入库领用记录</td>
+                </tr>
+                <tr>
+                    <td colspan="2">日期</td>
+                    <td rowspan="2">单位</td>
+                    <td rowspan="2" colspan="2">入库数</td>
+                    <td rowspan="2">领用数</td>
+                    <td rowspan="2">库存</td>
+                    <td rowspan="2">经手人</td>
+                </tr>
+                <tr>
+                    <td>月</td>
+                    <td>日</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <p>表单：表单是一个包含表单元素的区域。表单元素是允许用户在表单中输入信息的元素。（文本框、
+                下拉列表、单选框、复选框等等）<br>
+            其作用是从访问网站的用户那里获得信息，是用用户向服务器传输数据接口</p>
+            <ul>知识点小结
+                <li>《form》<br>
+                    <ul>
+                        <li>action:规定向何种发送提交表单数据。值：URL</li>
+                        <li>method:规定以何种方式将表单数据传送到服务器。值：get/post</li>
+                        <h4>所有表单控件都必须放在
+                            form标签之间，否则用户输入信息无法提交到服务器</h4>
+                    </ul>
+                </li>
+                <li><ul>
+                    文本框
+                    <li>当用户要在表单中输入字母、数字等内容时，就会用到文本框</li>
+                    <li> input type="text" name="名称" value="文本"/</li>
+                    <li>
+                        <ol>
+                            <li> type：当type = "text"时，输入框为文本输入框</li>
+                            <li>name：为输入框命名，以备后台程序使用</li>
+                            <li> value：为输入框设置默认值。(一般起到提示作用) </li>
+                        </ol>
+                    </li>
+                </ul></li>
+                <li>密码框
+                    <ul>
+                        <li>当用户要在表单中输入密码时，就会用到密码框</li>
+                        <li>input type="password" name="名称" value="文本"</li>
+                    </ul>
+                </li>
+                <h3>表单控件input标签——表单设计调查表是，为了减少
+                用户的操作，推荐使用选择框。<br>
+                HTML中有两种选择框，即单选框和复选框</h3>
+                <li>单选框——radio <br>
+                    《input type="radio" value="male" name="sex"  checked/》男 <br>
+                    《input type="radio" value="female" name="sex"/》女 <br>
+                    <h4>同组单选框name属性值必须相同</h4>
+                </li>
+                <li>复选框——checkbox <br>
+                    《input type="checkbox" value="good1" name="goods"/》
+                    I have a bike
+                    《input type="checkbox" value="good2" name="goods"/》
+                    I have a car
+                    <h4>checked:当添加checked时，该选项默认选中</h4>
+                </li>
+                <li>文件控件——file:当type属性值为file时，用于文件上传 <br>
+                    《input type="file" name="files"/》
+                </li>
+                <li>
+                    <ul>按钮
+                        <li>提交按钮：type="submit",提交表单信息到服务器 <br>
+                            《input type="submit" value="提交" name="sub"/》
+                        </li>
+                        <li>重置按钮：type="reset",重置表单信息至初始状态 <br>
+                            《input type="reset" value="重置" name="res"/》
+                        </li>
+                        <li>普通按钮：type="button" <br>
+                            《input type="button" value="按钮" name="but"》
+                        </li>
+                    </ul>
+                </li>
+                <li>多行文本域——《textarea》《/textarea》 <br>
+                    <ul>相关属性
+                        <li>rows:规定文本区可见行数</li>
+                        <li>cols:规定文本区内可见列数</li>
+                    </ul>
+                    《textarea name="cat" rows="3" cols="30"》<br>
+                    The cat was playing in the garden.<br>
+                    《/textarea》
+                </li>
+                <li>下拉列表 <br>
+                    《select name="class"》<br>
+                    《option value="one" selected》软件一班《/option》<br>
+                    《option value="two" selected》软件二班《/option》<br>
+                    《option value="three" selected》软件三班《/option》<br>
+                    《/select》<br>
+                </li>
+            </ul>
+            <img src="imgs/表单总结二.png" alt="形式">
+            <form action="#" method="post" align="center">
+                <h1 align="center">用户注册</h1>
+                用户名：
+                <input type="text" name="名字" value="请输入你的名字"/><br>
+                密码：
+                <input type="password" name="password"><br>
+                确认密码：
+                <input type="password" name="password1"><br>
+                性别：
+                <input type="radio" name="sex" value="man" checked/>男
+                <input type="radio" name="sex" value="woman"/>女<br>
+                生日：
+                <select name="year" id="#">
+                    <option value="2012">2012</option>
+                    <option value="1999" selected>1999</option>
+                    <option value="2000">2000</option>
+                </select>
+                <select name="month" id="#">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="day" id="#">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="#" selected>日</option>
+                </select>
+                <br>
+                爱好：
+                <input type="checkbox" name="1">乐音
+                <input type="checkbox" name="2" checked>读书
+                <input type="checkbox" name="3">游戏
+                <input type="checkbox" name="4">其他
+                <br>
+                <textarea name="introduction" id="" cols="30" rows="10">
+
+                </textarea><br>
+
+                上传头像：
+                <input type="file" name="file"><br>
+                <input type="submit" name="sub" value="提交">
+                <input type="reset" name="res" value="重置">
+                <input type="button" name="but" value="按钮">
+
+            </form>
+        </div>
+        <br>
+        <br>b
+        <div>
+            <ul>实体符号
+                <li>& 小于号或显示标记 lt;&lt;</li>
+                <li>& 大于号或显示标记 gt;&gt;</li>
+                <li>& 可用于显示其他特殊字符 amp；&amp;</li>
+                <li>& 已注册reg  &reg;</li>
+                <li>& 版权 copy &copy;</li>
+                <li>空格&nbsp;空格&nbsp;&nbsp;&nbsp;空格&——nbsp</li>
+            </ul>
+        </div>
+        <div><h1>知识点总结</h1>
+            <ul>
+                <h2>
+                    <li>HTML概述——超文本标记语言
+                        <ul>
+                            <li>超文本：用超链接的方法，将各种不同空间的文字信息组织在一起的网状文本</li>
+                            <li>标记：由标记组成</li>
+                            <li>语言：沟通网页开发者和访问者，由浏览器解析并表达</li>
+                        </ul>
+                    </li>
+                    <li>学习语言的三要素：词汇（标签）、语法（标签的使用规定）、语义（浏览器“理解”的标签含义）</li>
+                    <li>标签分类
+                        <ul>
+                            <li>双标签 <br>
+                                由“开始标签”和“结束标签”两部分构成，必须成对使用，且必须合理嵌套 <br>
+                                代表标签作用范围
+                            </li>
+                            <li>单标签 <br>
+                                在开始标签中进行关闭（以开始标签的结束而结束） <br>
+                                无需表达范围，仅在标签出现出有效
+                            </li>
+                            <li>HTML文档结构</li>
+                            <li>
+                                层叠样式表(或Cascading Style Sheets)
+                                <br>
+                                标签选择器、类选择器、id选择器 <br>
+                                <ul>高级选择器
+                                    <li>属性选择器       a[href] { color : red ; } </li>
+                                    <li>子元素选择器     h1 > strong { color : red ; } </li>
+                                    <li>相邻兄弟选择器  h1 + p { margin-top : 50px ; } </li>
+                                </ul>
+                            </li>
+                            <li>文字样式修饰 <br>
+                                <img src="imgs/文字样式.png" alt="1">
+                            </li>
+                            <li>超链接样式设置 <br>
+                                <img src="imgs/超链接样式.png" alt="2">
+                            </li>
+                            <il>背景设置 <br>
+                                <img src="imgs/背景设置.png" alt="3">
+                            </il>
+                            <li>列表样式设置 <br>
+                                <img src="imgs/列表样式.png" alt="4">
+                            </li>
+                        </ul>
+                    </li>
+                </h2>
+            </ul>
+        </div>
+    </body>
+</html>

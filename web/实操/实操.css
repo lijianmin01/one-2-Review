@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration:none;
+}
+body>div{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 30px;
+}
