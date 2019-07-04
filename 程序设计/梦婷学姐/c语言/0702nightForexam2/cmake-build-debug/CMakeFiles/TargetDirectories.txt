@@ -1,3 +1,0 @@
-F:/CLion/0702night/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/CLion/0702night/cmake-build-debug/CMakeFiles/0702night.dir
-F:/CLion/0702night/cmake-build-debug/CMakeFiles/rebuild_cache.dir

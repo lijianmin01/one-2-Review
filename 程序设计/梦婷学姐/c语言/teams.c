@@ -1,8 +1,70 @@
 #include<stdio.h>
-
+#include<string.h>
+struct text1{
+	char x;
+	int y;
+	char z;
+};
+struct text2
+{
+	char x;
+	char x1;
+	int a;
+};
+void my_strcpy(char **str1,char *str2)
+{
+	int len=0,i=0;
+	while(*str2++)
+	{
+		len++;
+	}
+	len++;
+	*str1=(char *)malloc(len*sizeof(char));
+	while((*(*str1+i)=*str2)!='\0')
+	{
+		i++;
+		str2+=1;
+	}
+}
 int main(int argc, char const *argv[])
 {
-	
+	char s1[50]="ABC";
+	char s2[50]="abc";
+	my_strcpy(&s1,s2);
+	puts(s1);
+
+	// printf("%d\n",sizeof(struct text1));
+	// printf("%d\n",sizeof(struct text2));//8
+	//两个指针进行相加是没有意义的
+
+	// char a[]="hello world";
+	// char *ptr=a;
+	// printf("%c %c %c %c\n",*(ptr+4),ptr[4],a[4],*(a+4));
+
+	// char *a="";
+	 // printf("%d\n",strlen("0\t\n\0C011\1"));
+	 // printf("%d\n",sizeof("0\t\n\0C011\1"));
+
+	// while(1)
+	// {
+	// 	printf("1 ");
+	// }
+	// for(;;)
+	// {
+	// 	printf("1 ");
+	// }
+
+	// int x=35;
+	// char z='A';
+	// int B;
+	// B=((x&15)&&(z<'a'));
+	// printf("%d\n",B);
+
+	// int a=8;
+	// float x=2.5;
+	// float y=4.7;
+	// printf("%f\n",x+a%3*(int)(x+y)%2/4);//2.500000
+
 	return 0;
 }
 
