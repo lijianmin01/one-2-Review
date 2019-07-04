@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdb
 struct text1{
 	char x;
 	int y;
@@ -23,7 +24,7 @@ void my_strcpy(char **str1,char *str2)
 	while((*(*str1+i)=*str2)!='\0')
 	{
 		i++;
-		str2+=1;
+		
 	}
 }
 int main(int argc, char const *argv[])
